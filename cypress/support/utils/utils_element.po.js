@@ -51,3 +51,26 @@ export class ExportDocument{
         .click()
     }
 }
+
+ export class paymentModel{
+     statusDocExp(){
+         cy.get('.datatable-row-wrapper:nth-child(1) .datatable-row-center .td-btn .btn-table:nth-child(1) ').should('contain', 'รอดำเนินการ').click()       
+     }
+     btnPayment(){
+         cy.get('.dropdown-inv-tour-0.dropdown-menu :nth-child(2)').click()
+     }
+     checkwithholdingTax(){
+        cy.get('.payment-modal .payment-popup .wht-group .control--checkbox').click()
+     }
+    //  inputholdingTax(){
+    //      cy.get('.bottomzero .input-select-custom .wth-amount ').click() //select3%
+    //  }
+    soluationPayment(){
+        cy.get('.payment-modal .payment-popup .payment-ddl-div .input-select-custom ').click()
+    }
+     btnSavePayment(){
+         cy.get('.modal-footer .ng-star-inserted .btn.btn-success').click()
+     }
+ }
+
+ 
